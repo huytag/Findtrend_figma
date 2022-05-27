@@ -1,0 +1,118 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  //   max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container-header {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-custom {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+a {
+  text-decoration: none !important;
+  &:hover {
+    color: $white-color !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 36px !important;
+  }
+}
+
+.bg-green-primary {
+  background: $green-primary-color !important;
+}
+
+.text-color-gray {
+  color: #87D322 !important;
+}
+
+
+.button {
+  text-decoration: none;
+  color: $white-color;
+  font-size: 18px;
+  font-weight: 400;
+  list-style: calc(18 / 18);
+  padding: 12px 32px;
+  transition: all 0.3s ease;
+  &-white {
+    padding: 16px 32px;
+    background-color: $white-color;
+    color: $black-color;
+    border-radius: 40px;
+    &:hover {
+      background-color: $green-primary-color !important;
+      color: $black-color !important;
+    }
+  }
+  &-black {
+    padding: 16px 32px;
+    background-color: $black-color;
+    color: $white-color;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    &:hover {
+      background-color: $white-color !important;
+      color: $black-color !important;
+    }
+  }
+  &-primary {
+    padding: 16px 32px;
+    border-radius: 40px;
+    background-color: $green-primary-color;
+    color: $black-color;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: calc(25.2 / 18);
+    &:hover {
+      background-color: $black-color !important;
+      color: $white-color !important;
+    }
+  }
+}
+
+.text-white {
+  color: $white-color;
+}
+
+.heading {
+  font-size: 72px;
+  font-weight: 900;
+  line-height: calc(80.64 / 72);
+  color: $white-color;
+}
+
+.header-sc {
+  background-color: $black-color;
+  background-image: url(../images/Ornament.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  // object-fit: cover;
+}

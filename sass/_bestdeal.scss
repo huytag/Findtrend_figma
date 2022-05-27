@@ -1,0 +1,148 @@
+.bestdeal {
+  background: $black-color;
+  padding: 140px 0;
+  .heading {
+    font-size: 64px;
+    line-height: calc(76 / 64);
+  }
+  &-group_btn {
+    padding: 40px 0;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 24px;
+    .text-left {
+      color: $text-gray;
+    }
+    .text-right {
+      color: $text-gray;
+      position: relative;
+    }
+    .d-sale {
+      width: 76px;
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 400;
+      position: absolute;
+      right: -150%;
+      top: -50%;
+      display: flex;
+      flex-direction: column;
+      .sale {
+        color: $white-color;
+      }
+      img {
+        transform: rotate(-7deg);
+        margin-top: 7px;
+        margin-right: 35px;
+      }
+    }
+    .button-switch {
+      display: inline-block;
+      width: 104px;
+      height: 52px;
+      background: $white-color;
+      border-radius: 99px;
+      position: relative;
+      cursor: pointer;
+      span {
+        position: absolute;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        margin: 8px;
+        background: $green-primary-color;
+        border-radius: 99px;
+        transition: 0.3s ease-in-out;
+      }
+      &.is-click span {
+        left: 0;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+  &-card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 40px;
+  }
+  &-card-item {
+    background: $bg-gray;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  &-card-top {
+    border-bottom: 1px solid $black-color;
+    font-weight: 400;
+    line-height: 100%;
+    .title {
+      margin: 0;
+      font-size: 36px;
+    }
+    .desc {
+      margin-bottom: 32px;
+      font-size: 18px;
+    }
+  }
+  &-card-content {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    .price-mouth {
+      padding-top: 32px;
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 100%;
+      span {
+        font-size: 18px;
+      }
+    }
+    .option {
+      display: flex;
+      flex-direction: column;
+      gap: 24px 0;
+    }
+    .option-item {
+      img {
+        margin-right: 13px;
+      }
+    }
+  }
+  .button {
+    margin-top: auto;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .bestdeal {
+    padding: 90px 0;
+    &-card-list {
+      grid-template-columns: 1fr;
+      grid-gap: 24px 0;
+    }
+    &-group_btn {
+      padding: 40px 0;
+      padding-bottom: 80px;
+      .d-sale {
+        right: 0%;
+        top: 150%;
+        flex-direction: column-reverse;
+        transform: rotate(11deg);
+        padding-bottom: 10px;
+        img {
+          height: 34px;
+          width: 28px;
+          transform: rotate(-5deg);
+          margin-top: 0px;
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}

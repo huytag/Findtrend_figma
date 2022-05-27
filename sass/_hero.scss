@@ -1,0 +1,117 @@
+.hero {
+  padding-bottom: 250px;
+  .heading {
+    padding: 0;
+    margin: 0;
+  }
+  .heading:nth-child(2) {
+    padding-bottom: 24px;
+  }
+  &-desc {
+    color: $text-gray;
+    max-width: 666px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    font-size: 18px;
+    font-family: 400;
+  }
+  &-content-btn {
+    position: relative;
+    margin-top: 100px;
+  }
+  &-item-tab {
+    width: 340px;
+    padding: 28px 24px 28px 41px;
+    background: #181818;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 10px 10px #000000;
+    transform: rotate(-4deg);
+    position: absolute;
+    span {
+      font-weight: 400;
+      font-size: 23.81px;
+      line-height: calc(27.9 / 23.81);
+      color: $white-color;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .logo-tab {
+      margin-right: 13px;
+    }
+    &:nth-child(1) {
+      z-index: 5;
+      left: 20px;
+    }
+    &:nth-child(2) {
+      transform: rotate(2deg);
+      left: 270px;
+      z-index: 4;
+      top: 65px;
+    }
+    &:nth-child(3) {
+      transform: rotate(-2deg);
+      right: 270px;
+      z-index: 3;
+    }
+    &:nth-child(4) {
+      transform: rotate(4deg);
+      right: 20px;
+      top: 65px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-item-tab {
+    position: relative;
+    &:nth-child(1) {
+      z-index: 5;
+      left: 0px;
+      transform: rotate(-4deg);
+      margin: 0 auto;
+    }
+    &:nth-child(2) {
+      left: 0px;
+      z-index: 4;
+      top: 0px;
+      left: 0px;
+      transform: rotate(2deg);
+      margin: 0 auto;
+    }
+    &:nth-child(3) {
+      right: 0px;
+      z-index: 3;
+      left: 0px;
+      transform: rotate(-2deg);
+      margin: 0 auto;
+    }
+    &:nth-child(4) {
+      right: 0px;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      transform: rotate(4deg);
+      margin: 0 auto;
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .hero-desc {
+    font-size: 14px !important;
+  }
+  .hero-content-btn {
+    margin-top: 60px;
+  }
+  .hero {
+    padding-bottom: 50px;
+    &-item-tab {
+      span {
+        font-size: 20.4px;
+      }
+    }
+  }
+}

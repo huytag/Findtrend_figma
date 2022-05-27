@@ -1,0 +1,135 @@
+.header {
+  padding-bottom: 100px;
+  background-color: transparent;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+  }
+  &-menu {
+    display: flex;
+    gap: 0 40px;
+    a {
+      text-decoration: none;
+      color: $white-color;
+      font-size: 18px;
+      line-height: calc(18 / 18);
+    }
+  }
+  &-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    color: $white-color;
+    img {
+      &.is-show {
+        z-index: 9999;
+        position: fixed;
+        top: 32px;
+        left: 20px;
+      }
+    }
+    h4 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 100%;
+    }
+  }
+  .menu-toglle {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20px;
+    height: 15px;
+    flex-direction: column;
+    span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $white-color;
+    }
+    &.is-show {
+      z-index: 999;
+      top: 32px;
+      right: 20px;
+      position: fixed;
+      .toogle1,
+      .toogle2 {
+        display: none;
+      }
+      .close:before,
+      .close:after {
+        position: absolute;
+        left: 15px;
+        content: " ";
+        height: 20px;
+        width: 2px;
+        background-color: $white-color;
+      }
+      .close:before {
+        transform: rotate(45deg);
+      }
+      .close:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .header-menu-link {
+    position: relative;
+    transition: all 0.2s linear;
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: auto;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background: $green-primary-color;
+      transition: all 0.2s linear;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .mt-100 {
+    margin-top: 100px;
+  }
+  .header-menu {
+    position: fixed;
+    z-index: 99;
+    background-color: $black-color;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 550px;
+    will-change: transform;
+    gap: 40px 0;
+    padding-top: 40px;
+    align-items: stretch;
+    transition: all 0.5s ease-out;
+    text-align: center;
+    transform: translateY(-100%);
+    &.is-show {
+      transform: translateY(0);
+    }
+    .button-white {
+      color: $black-color;
+    }
+  }
+}
